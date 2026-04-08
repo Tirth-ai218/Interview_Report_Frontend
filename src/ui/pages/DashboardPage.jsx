@@ -80,7 +80,7 @@ const DashboardPage = () => {
 
     const report = await generateReport({ selfDescription, jobDescription, resumeFile });
     if (report) {
-      navigate(`/report/${report._id}`);
+      navigate(`/reports/${report._id}`);
     }
   };
 
