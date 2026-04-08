@@ -14,7 +14,7 @@ import axios from "axios";
 
 // Base axios instance — all requests share this config
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",          // CRA proxy forwards this to http://localhost:5000/api
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,          // CRA proxy forwards this to http://localhost:5000/api
   withCredentials: true,    // Send cookies with every request (JWT auth)
   headers: {
     "Content-Type": "application/json",
