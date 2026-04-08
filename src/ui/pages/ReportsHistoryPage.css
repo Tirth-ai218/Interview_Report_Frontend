@@ -1,0 +1,119 @@
+/* ReportsHistoryPage.css */
+
+.history-page {
+  min-height: calc(100vh - 60px);
+  padding: 3rem 0 5rem;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.history-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.history-page__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.history-page__title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.history-page__subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.history-page__new-btn {
+  align-self: center;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.history-page__new-btn:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 0 18px rgba(255,51,51,0.25);
+}
+
+/* ── List ────────────────────────────────────────────────────── */
+.history-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* ── Empty state ─────────────────────────────────────────────── */
+.history-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  gap: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  animation: fadeIn 0.4s ease;
+}
+
+.history-page__empty-icon {
+  font-size: 3rem;
+  color: var(--text-muted);
+  display: block;
+  animation: spin 10s linear infinite;
+}
+
+.history-page__empty-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.history-page__empty-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 320px;
+}
+
+.history-page__empty-btn {
+  background: transparent;
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.history-page__empty-btn:hover {
+  background: var(--accent-glow);
+  box-shadow: 0 0 14px rgba(255,51,51,0.2);
+}

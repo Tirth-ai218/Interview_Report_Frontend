@@ -1,0 +1,116 @@
+/* ============================================================
+   Global Styles — Interview Report AI
+   Theme: Dark futuristic — black background, red accents
+   ============================================================ */
+
+:root {
+  /* Colour palette */
+  --bg-primary:    #0a0a0a;
+  --bg-secondary:  #111111;
+  --bg-card:       #161616;
+  --bg-elevated:   #1c1c1c;
+
+  --accent:        #ff3333;
+  --accent-dim:    #cc1a1a;
+  --accent-glow:   rgba(255, 51, 51, 0.15);
+  --accent-border: rgba(255, 51, 51, 0.35);
+
+  --text-primary:  #f0f0f0;
+  --text-secondary:#a0a0a0;
+  --text-muted:    #555555;
+
+  --border:        rgba(255, 255, 255, 0.07);
+  --border-hover:  rgba(255, 255, 255, 0.14);
+
+  /* Typography */
+  --font-display:  'Rajdhani', sans-serif;
+  --font-mono:     'Space Mono', monospace;
+  --font-body:     'Exo 2', sans-serif;
+
+  /* Spacing */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  /* Subtle scanline texture for futuristic feel */
+  background-image: 
+    linear-gradient(rgba(255,51,51,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,51,51,0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+a:hover { opacity: 0.8; }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+
+/* ── Utility classes ─────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* ── Keyframe animations ──────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: var(--accent-border); }
+  50%       { border-color: var(--accent); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glitch-x {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-2px); }
+  40%       { transform: translateX(2px); }
+  60%       { transform: translateX(-1px); }
+}
